@@ -162,7 +162,11 @@ class SqlBuilder extends Nette\Object
 			}
 
 			if ($this->driverName !== 'mysql') {
-				$condition .= ' IN (' . $clone->getSql() . ')';
+				if (substr_count($condition , ',')>0) {
+					$condition = '(' . $condition . ') IN (' . $clone->getSql() . ')';
+				} else {
+					$condition .= ' IN (' . $clone->getSql() . ')';
+				}
 			} else {
 				$in = array();
 				foreach ($clone as $row) {
