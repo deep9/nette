@@ -52,4 +52,4 @@ introduction to the framework by creating a simple database driven application.
 
 -----
 
-[![Build Status](https://secure.travis-ci.org/nette/nette.png?branch=master)](http://travis-ci.org/nette/nette)
+[![Build Status](https://secure.travis-ci.org/deep9/nette.png?branch=master)](http://travis-ci.org/deep9/nette)
